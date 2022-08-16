@@ -8,7 +8,7 @@ public class Job {
     private int id;
     private static int nextId = 1;
 
-    private String name = "OOPS! This job does not seem to exist.";
+    private String name;
     private Employer employer;
     private Location location;
     private PositionType positionType;
@@ -41,8 +41,23 @@ public class Job {
     //  and id.
     @Override
     public String toString() {
+        if (name == null){
+            name = "Data not available";
+        }
+        if (employer.getValue() == null || employer.getValue() == ""){
+            employer.setValue("Data not available");
+        }
+        if (location.getValue() == null || location.getValue() == ""){
+            location.setValue("Data not available");
+        }
+        if (positionType.getValue() == null || positionType.getValue() == ""){
+            positionType.setValue("Data not available");
+        }
+        if (coreCompetency.getValue() == null || coreCompetency.getValue() == ""){
+            coreCompetency.setValue("Data not available");
+        }
 
-        return "\n ID: " + id + "\n Name: " + name + "\n Employer: " + employer + "\n Location: " + location + "\n Position Type: " + positionType + "\n Core Competency: " + coreCompetency + "\n";
+        return "\nID: " + id + "\nName: " + name + "\nEmployer: " + employer + "\nLocation: " + location + "\nPosition Type: " + positionType + "\nCore Competency: " + coreCompetency + "\n";
     }
 
     @Override

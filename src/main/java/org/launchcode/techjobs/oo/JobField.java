@@ -5,7 +5,7 @@ import java.util.Objects;
 public abstract class JobField {
     private int id;
     private static int nextId = 1;
-    private String value = "OOPS! This job does not seem to exist.";
+    private String value;
 
     public JobField() {
         id = nextId;
