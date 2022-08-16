@@ -5,32 +5,32 @@ import java.util.Objects;
 public abstract class JobField {
     private int id;
     private static int nextId = 1;
-    private String aValue = "OOPS! This job does not seem to exist.";
+    private String value = "OOPS! This job does not seem to exist.";
 
     public JobField() {
         id = nextId;
         nextId++;
     }
 
-    public JobField(String aValue) {
+    public JobField(String value) {
         this();
-        this.aValue = aValue;
+        this.value = value;
     }
     public int getId() {
         return id;
     }
 
-    public String getAValue() {
-        return aValue;
+    public String getValue() {
+        return value;
     }
 
-    public void setAValue(String aValue) {
-        this.aValue = aValue;
+    public void setValue(String value) {
+        this.value = value;
     }
 
     @Override
     public String toString() {
-        return aValue;
+        return value;
     }
 
     @Override

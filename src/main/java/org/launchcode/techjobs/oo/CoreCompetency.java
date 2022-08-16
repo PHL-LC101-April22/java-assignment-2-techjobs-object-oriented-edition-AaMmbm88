@@ -13,8 +13,8 @@ public class CoreCompetency extends JobField {
 //        nextId++;
     }
 
-    public CoreCompetency(String aValue) {
-        super(aValue);
+    public CoreCompetency(String value) {
+        super(value);
     }
 
     // Custom toString, equals, and hashCode methods:

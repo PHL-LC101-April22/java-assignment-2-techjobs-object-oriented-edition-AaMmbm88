@@ -33,13 +33,13 @@ public class JobTest {
         assertTrue(job_1.getName() instanceof String);
         assertEquals("Product tester", job_1.getName());
         assertTrue(job_1.getEmployer() instanceof Employer);
-        assertEquals("ACME", job_1.getEmployer().getAValue());
+        assertEquals("ACME", job_1.getEmployer().getValue());
         assertTrue(job_1.getLocation() instanceof Location);
-        assertEquals("Desert", job_1.getLocation().getAValue());
+        assertEquals("Desert", job_1.getLocation().getValue());
         assertTrue(job_1.getPositionType() instanceof PositionType);
-        assertEquals("Quality control", job_1.getPositionType().getAValue());
+        assertEquals("Quality control", job_1.getPositionType().getValue());
         assertTrue(job_1.getCoreCompetency() instanceof CoreCompetency);
-        assertEquals("Persistence", job_1.getCoreCompetency().getAValue());
+        assertEquals("Persistence", job_1.getCoreCompetency().getValue());
 
     }
     @Test
@@ -64,19 +64,19 @@ public class JobTest {
         assertTrue(job_1.toString().contains("Name: "));
         assertTrue(job_1.toString().contains(job_1.getName()));
         assertTrue(job_1.toString().contains("Employer: "));
-        assertTrue(job_1.toString().contains(job_1.getEmployer().getAValue()));
+        assertTrue(job_1.toString().contains(job_1.getEmployer().getValue()));
         assertTrue(job_1.toString().contains("Location: "));
-        assertTrue(job_1.toString().contains(job_1.getLocation().getAValue()));
+        assertTrue(job_1.toString().contains(job_1.getLocation().getValue()));
         assertTrue(job_1.toString().contains("Position Type: "));
-        assertTrue(job_1.toString().contains(job_1.getPositionType().getAValue()));
+        assertTrue(job_1.toString().contains(job_1.getPositionType().getValue()));
         assertTrue(job_1.toString().contains("Core Competency: "));
-        assertTrue(job_1.toString().contains(job_1.getCoreCompetency().getAValue()));
+        assertTrue(job_1.toString().contains(job_1.getCoreCompetency().getValue()));
     }
 
     @Test
     public void testToStringTHandlesEmptyFields(){
          job_1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency());
-         assertEquals("OOPS! This job does not seem to exist.", job_1.getCoreCompetency().getAValue());
+         assertEquals("OOPS! This job does not seem to exist.", job_1.getCoreCompetency().getValue());
 
     }
 

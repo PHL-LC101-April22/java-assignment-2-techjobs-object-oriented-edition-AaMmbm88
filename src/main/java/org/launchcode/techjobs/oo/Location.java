@@ -13,8 +13,8 @@ public class Location extends JobField {
 //        nextId++;
     }
 
-    public Location(String aValue) {
-        super(aValue);
+    public Location(String value) {
+        super(value);
     }
 
 
