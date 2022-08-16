@@ -1,5 +1,6 @@
 package org.launchcode.techjobs.oo;
 
+import java.lang.reflect.Field;
 import java.util.Objects;
 
 public class Job {
@@ -7,7 +8,7 @@ public class Job {
     private int id;
     private static int nextId = 1;
 
-    private String name;
+    private String name = "OOPS! This job does not seem to exist.";
     private Employer employer;
     private Location location;
     private PositionType positionType;
@@ -38,6 +39,11 @@ public class Job {
 
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
+    @Override
+    public String toString() {
+
+        return "\n ID: " + id + "\n Name: " + name + "\n Employer: " + employer + "\n Location: " + location + "\n Position Type: " + positionType + "\n Core Competency: " + coreCompetency + "\n";
+    }
 
     @Override
     public boolean equals(Object o) {

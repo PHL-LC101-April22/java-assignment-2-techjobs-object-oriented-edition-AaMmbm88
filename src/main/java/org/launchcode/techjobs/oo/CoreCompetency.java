@@ -6,7 +6,7 @@ public class CoreCompetency {
 
     private int id;
     private static int nextId = 1;
-    private String value;
+    private String value = "OOPS! This job does not seem to exist.";
 
     public CoreCompetency() {
         this.id = nextId;
