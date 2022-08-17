@@ -89,6 +89,11 @@ public class JobTest {
          assertTrue(job_1.toString().contains("Core Competency: Data not available"));
 
     }
+    @Test
+    public void testNonexistantJobWithNoFields(){
+        job_1 = new Job("", new Employer(""), new Location(""), new PositionType(""),new CoreCompetency(""));
+        assertEquals("OOPS! This job does not seem to exist.", job_1.toString());
+    }
 
 }
 
