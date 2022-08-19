@@ -74,18 +74,6 @@ public class JobTest {
                 "\nCore Competency: Persistence\n",job.toString());
 
 
-//        assertTrue(job.toString().contains("ID: "));
-//        assertTrue(job.toString().contains(String.valueOf(job.getId())));
-//        assertTrue(job.toString().contains("Name: "));
-//        assertTrue(job.toString().contains(job.getName()));
-//        assertTrue(job.toString().contains("Employer: "));
-//        assertTrue(job.toString().contains(job.getEmployer().getValue()));
-//        assertTrue(job.toString().contains("Location: "));
-//        assertTrue(job.toString().contains(job.getLocation().getValue()));
-//        assertTrue(job.toString().contains("Position Type: "));
-//        assertTrue(job.toString().contains(job.getPositionType().getValue()));
-//        assertTrue(job.toString().contains("Core Competency: "));
-//        assertTrue(job.toString().contains(job.getCoreCompetency().getValue()));
     }
 
     @Test
